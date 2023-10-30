@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tetris"
         mc:Ignorable="d"
-        Title="Tetris" MinWidth="600" MinHeight="800"
+        Title="Tetris" Height="600" Width="800"
+        MinWidth="600" MinHeight="600"
         Foreground="White"
         FontFamily="Sego UI Light" FontSize="28"
+        KeyDown="Window_KeyDown"
          >
 
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -36,7 +38,7 @@
                
                 Background="#101010"
                 Width="250"
-                Height="500"
+                Height="510"
                     ClipToBounds="True"
                     Loaded="GameCanvas_Loaded"/>
         </Viewbox>
@@ -65,11 +67,12 @@
         <StackPanel Grid.Row="1" 
                     Grid.Column="2"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Right">
+                    HorizontalAlignment="Left"
+                    >
 
             <TextBlock Text="Next"
-           TextAlignment="Center"/>
-            
+           TextAlignment="Center"></TextBlock>
+
             <Image x:Name="NextImage"
                    Margin="20"
                    Width="125"/>
@@ -80,10 +83,10 @@
               Grid.RowSpan="2"
               Grid.ColumnSpan="3"
               Visibility="Hidden">
-            
+
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                
+
                 <TextBlock Text="Game Over"
                            FontSize="48"
                            TextAlignment="Center"/>
